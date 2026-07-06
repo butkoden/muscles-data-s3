@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "muscles-data-s3"
+version = "0.1.0"
+description = "S3-compatible ObjectStorePort adapter for muscles-data"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Denis B.", email = "denis@butko.info" }]
+dependencies = [
+  "muscles-data>=0.1.0",
+  "boto3>=1.34",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0,<9.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
