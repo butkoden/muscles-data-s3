@@ -14,6 +14,20 @@ dependencies = [
   "boto3>=1.34,<2.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/butkoden/muscles-data-s3"
+Repository = "https://github.com/butkoden/muscles-data-s3"
+Documentation = "https://github.com/butkoden/muscles-data-s3#readme"
+PyPI = "https://pypi.org/project/muscles-data-s3/"
+Releases = "https://github.com/butkoden/muscles-data-s3/releases"
+"muscles-data" = "https://pypi.org/project/muscles-data/"
+"muscles-data-elasticsearch" = "https://pypi.org/project/muscles-data-elasticsearch/"
+"muscles-data-opensearch" = "https://pypi.org/project/muscles-data-opensearch/"
+"muscles-data-qdrant" = "https://pypi.org/project/muscles-data-qdrant/"
+"muscles-data-redis" = "https://pypi.org/project/muscles-data-redis/"
+"muscles-data-mongodb" = "https://pypi.org/project/muscles-data-mongodb/"
+"muscles-data-sqlalchemy" = "https://pypi.org/project/muscles-data-sqlalchemy/"
+
 [project.optional-dependencies]
 dev = [
   "pytest>=8.0,<9.0",
