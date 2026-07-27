@@ -26,15 +26,6 @@ jobs:
 
   integration:
     runs-on: ubuntu-latest
-    services:
-      minio:
-        image: minio/minio:RELEASE.2024-10-13T13-34-11Z
-        env:
-          MINIO_ROOT_USER: minioadmin
-          MINIO_ROOT_PASSWORD: minioadmin
-        ports:
-          - 9000:9000
-          - 9001:9001
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
@@ -49,6 +40,7 @@ jobs:
       - run: python -m pip install -e ./muscles-data --no-deps
       - run: python -m pip install -e ".[dev]" --no-deps
       - run: python -m pip install "pytest>=8.0,<9.0" "boto3>=1.34,<2.0"
+      - run: docker run -d --name muscles-data-minio -p 9000:9000 -p 9001:9001 -e MINIO_ROOT_USER=minioadmin -e MINIO_ROOT_PASSWORD=minioadmin minio/minio:RELEASE.2024-10-13T13-34-11Z server /data --console-address :9001
       - run: curl --retry 30 --retry-connrefused --retry-delay 2 http://127.0.0.1:9000/minio/health/live
       - run: python -m pytest -q -m integration
         env:
