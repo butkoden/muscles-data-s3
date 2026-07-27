@@ -136,10 +136,11 @@ def test_s3_object_store_is_registered_lazy_and_maps_operations():
         metadata={"owner": "denis", "version": 1},
     )
     blob = store.get_object("docs/readme.txt")
+    ranged = store.get_object("docs/readme.txt", options={"range": "bytes=0-2", "checksum_mode": "ENABLED"})
     store.put_object("docs/guide.txt", b"guide")
     store.put_object("images/logo.png", b"png")
     listed_objects = store.list_objects(prefix="docs", limit=10)
-    deleted = store.delete_object("docs/guide.txt")
+    deleted = store.delete_object("docs/guide.txt", options={"version_id": "v1"})
 
     assert write.written == 1
     assert client.put_calls[0]["Bucket"] == "documents"
@@ -151,11 +152,14 @@ def test_s3_object_store_is_registered_lazy_and_maps_operations():
     assert blob.content == b"hello"
     assert blob.content_type == "text/plain"
     assert blob.metadata == {"owner": "denis", "version": "1"}
+    assert ranged.content == b"hello"
+    assert client.get_calls[-1]["Range"] == "bytes=0-2"
+    assert client.get_calls[-1]["ChecksumMode"] == "ENABLED"
     assert [item.key for item in listed_objects] == ["docs/guide.txt", "docs/readme.txt"]
     assert client.list_calls[-1]["Prefix"] == "raw/docs/"
     assert client.list_calls[-1]["MaxKeys"] == 2
     assert deleted.deleted == 1
-    assert client.delete_calls[-1] == {"Bucket": "documents", "Key": "raw/docs/guide.txt"}
+    assert client.delete_calls[-1] == {"Bucket": "documents", "Key": "raw/docs/guide.txt", "VersionId": "v1"}
 
     native = runtime.require_resource("objects.docs", DataCapability.NATIVE_CLIENT).native_client()
     assert native is client

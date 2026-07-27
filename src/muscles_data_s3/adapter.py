@@ -102,10 +102,22 @@ class S3ObjectStoreAdapter:
         return WriteResult(written=1, matched=1)
 
     def get_object(self, key: str, options: Mapping[str, Any] | None = None) -> ObjectBlob:
-        del options
         normalized = _normalize_object_key(key)
+        request: dict[str, Any] = {
+            "Bucket": self.bucket_name(),
+            "Key": self._storage_key(normalized),
+        }
+        for option_key, request_key in {
+            "version_id": "VersionId",
+            "range": "Range",
+            "if_match": "IfMatch",
+            "if_none_match": "IfNoneMatch",
+            "checksum_mode": "ChecksumMode",
+        }.items():
+            if option_key in (options or {}):
+                request[request_key] = (options or {})[option_key]
         try:
-            response = self._client_instance().get_object(Bucket=self.bucket_name(), Key=self._storage_key(normalized))
+            response = self._client_instance().get_object(**request)
             body = response.get("Body")
             content = body.read() if hasattr(body, "read") else body
         except (S3ClientMissingError, S3ConfigError):
@@ -126,7 +138,6 @@ class S3ObjectStoreAdapter:
         cursor: str | None = None,
         options: Mapping[str, Any] | None = None,
     ) -> list[ObjectInfo]:
-        del options
         bounded_limit = self._bounded_limit(limit)
         kwargs: dict[str, Any] = {
             "Bucket": self.bucket_name(),
@@ -137,6 +148,14 @@ class S3ObjectStoreAdapter:
             kwargs["Prefix"] = storage_prefix
         if cursor:
             kwargs["ContinuationToken"] = str(cursor)
+        for option_key, request_key in {
+            "delimiter": "Delimiter",
+            "start_after": "StartAfter",
+            "fetch_owner": "FetchOwner",
+            "request_payer": "RequestPayer",
+        }.items():
+            if option_key in (options or {}):
+                kwargs[request_key] = (options or {})[option_key]
         try:
             response = self._client_instance().list_objects_v2(**kwargs)
         except (S3ClientMissingError, S3ConfigError):
@@ -157,9 +176,20 @@ class S3ObjectStoreAdapter:
         return output
 
     def delete_object(self, key: str, options: Mapping[str, Any] | None = None) -> WriteResult:
-        del options
+        request: dict[str, Any] = {
+            "Bucket": self.bucket_name(),
+            "Key": self._storage_key(key),
+        }
+        for option_key, request_key in {
+            "version_id": "VersionId",
+            "mfa": "MFA",
+            "bypass_governance_retention": "BypassGovernanceRetention",
+            "request_payer": "RequestPayer",
+        }.items():
+            if option_key in (options or {}):
+                request[request_key] = (options or {})[option_key]
         try:
-            self._client_instance().delete_object(Bucket=self.bucket_name(), Key=self._storage_key(key))
+            self._client_instance().delete_object(**request)
         except (S3ClientMissingError, S3ConfigError):
             raise
         except Exception as exc:

@@ -86,6 +86,11 @@ items = objects.list_objects(prefix="docs", limit=20)
 objects.delete_object("docs/readme.txt")
 ```
 
+Backend-specific request options are available without exposing the boto3
+client: `get_object()` accepts `range`, conditional headers and
+version/checksum options; `list_objects()` accepts `delimiter` and continuation
+helpers; and `delete_object()` accepts version and retention options.
+
 If `prefix: raw` is configured, the public key `docs/readme.txt` is stored as
 `raw/docs/readme.txt` in S3 and returned to port consumers without the configured
 prefix. This keeps application code independent from bucket layout details.
