@@ -8,9 +8,9 @@ from pathlib import PurePosixPath
 from typing import Any, Mapping
 from urllib.parse import urlsplit
 
-from muscles_data.config import DataResourceConfig
-from muscles_data.errors import DataError
-from muscles_data.models import DataCapability, HealthResult, InspectResult, ObjectBlob, ObjectInfo, WriteResult
+from muscles.data.config import DataResourceConfig
+from muscles.data.errors import DataError
+from muscles.data.models import DataCapability, HealthResult, InspectResult, ObjectBlob, ObjectInfo, WriteResult
 
 
 _CLIENT_UNSET = object()

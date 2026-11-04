@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from .adapter import (
+from muscles.data.s3.adapter import (
     S3AdapterError,
     S3ClientMissingError,
     S3ConfigError,

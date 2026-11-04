@@ -1,0 +1,1065 @@
+{
+  "version": "1.0.0",
+  "schema_version": 1,
+  "project": {
+    "name": "muscles-data-s3",
+    "is_monorepo": false,
+    "total_files": 12,
+    "entry_points": [],
+    "tech_stack": [
+      {
+        "name": "SQLAlchemy",
+        "version": null,
+        "category": "database"
+      },
+      {
+        "name": "Python",
+        "version": null,
+        "category": "language"
+      }
+    ],
+    "entry_candidates": [],
+    "graph_mode": "flow"
+  },
+  "nodes": [
+    {
+      "id": "class:src/muscles_data_s3/adapter.py:S3AdapterError",
+      "type": "class",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "S3AdapterError",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "class:src/muscles_data_s3/adapter.py:S3ClientMissingError",
+      "type": "class",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "S3ClientMissingError",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "class:src/muscles_data_s3/adapter.py:S3ConfigError",
+      "type": "class",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "S3ConfigError",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "class:src/muscles_data_s3/adapter.py:S3ConnectionError",
+      "type": "class",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "S3ConnectionError",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "class:src/muscles_data_s3/adapter.py:S3ObjectStoreAdapter",
+      "type": "class",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "S3ObjectStoreAdapter",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "class:src/muscles_data_s3/adapter.py:S3ObjectStoreFactory",
+      "type": "class",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "S3ObjectStoreFactory",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "file:.github/workflows/ci.yml",
+      "type": "pipeline",
+      "filePath": ".github/workflows/ci.yml",
+      "language": "yaml",
+      "symbolCount": 0,
+      "lineCount": 38,
+      "complexity": "simple",
+      "pagerank": 0.052247,
+      "communityId": 1,
+      "tags": [
+        "config",
+        "ci"
+      ],
+      "summary": "GitHub Actions CI/CD workflow definition."
+    },
+    {
+      "id": "file:.github/workflows/release.yml",
+      "type": "pipeline",
+      "filePath": ".github/workflows/release.yml",
+      "language": "yaml",
+      "symbolCount": 0,
+      "lineCount": 28,
+      "complexity": "simple",
+      "pagerank": 0.052247,
+      "communityId": 2,
+      "tags": [
+        "config",
+        "ci"
+      ],
+      "summary": "GitHub Actions CI/CD workflow definition."
+    },
+    {
+      "id": "file:CHANGELOG.md",
+      "type": "document",
+      "filePath": "CHANGELOG.md",
+      "language": "markdown",
+      "symbolCount": 0,
+      "lineCount": 6,
+      "complexity": "simple",
+      "pagerank": 0.052247,
+      "communityId": 3,
+      "tags": [],
+      "summary": "Release history and notable changes."
+    },
+    {
+      "id": "file:README.md",
+      "type": "document",
+      "filePath": "README.md",
+      "language": "markdown",
+      "symbolCount": 0,
+      "lineCount": 103,
+      "complexity": "moderate",
+      "pagerank": 0.052247,
+      "communityId": 4,
+      "tags": [],
+      "summary": "Project overview and entry point for new readers."
+    },
+    {
+      "id": "file:docs/release-candidate.md",
+      "type": "document",
+      "filePath": "docs/release-candidate.md",
+      "language": "markdown",
+      "symbolCount": 0,
+      "lineCount": 19,
+      "complexity": "simple",
+      "pagerank": 0.052247,
+      "communityId": 5,
+      "tags": [],
+      "summary": "Documentation: release-candidate.md."
+    },
+    {
+      "id": "file:examples/run_s3_object_store.py",
+      "type": "file",
+      "filePath": "examples/run_s3_object_store.py",
+      "language": "python",
+      "symbolCount": 11,
+      "lineCount": 86,
+      "complexity": "moderate",
+      "pagerank": 0.052247,
+      "communityId": 0,
+      "tags": [],
+      "summary": "Docs & Tooling module run_s3_object_store defining FakeBody, __init__, read.",
+      "primaryOwner": "Denis Butko"
+    },
+    {
+      "id": "file:pyproject.toml",
+      "type": "config",
+      "filePath": "pyproject.toml",
+      "language": "toml",
+      "symbolCount": 0,
+      "lineCount": 38,
+      "complexity": "simple",
+      "pagerank": 0.052247,
+      "communityId": 6,
+      "tags": [
+        "config"
+      ],
+      "summary": "Python project metadata, dependencies, and build configuration."
+    },
+    {
+      "id": "file:src/muscles_data_s3/__init__.py",
+      "type": "file",
+      "filePath": "src/muscles_data_s3/__init__.py",
+      "language": "python",
+      "symbolCount": 1,
+      "lineCount": 9,
+      "complexity": "simple",
+      "pagerank": 0.229886,
+      "communityId": 0,
+      "tags": [],
+      "summary": "Application module __init__ (1 symbols).",
+      "primaryOwner": "Denis Butko"
+    },
+    {
+      "id": "file:src/muscles_data_s3/adapter.py",
+      "type": "file",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "language": "python",
+      "symbolCount": 38,
+      "lineCount": 377,
+      "complexity": "complex",
+      "pagerank": 0.247647,
+      "communityId": 0,
+      "tags": [],
+      "summary": "Application module adapter defining S3AdapterError, S3ConfigError, S3ClientMissingError.",
+      "primaryOwner": "Denis Butko"
+    },
+    {
+      "id": "file:tests/test_integration 2.py",
+      "type": "file",
+      "filePath": "tests/test_integration 2.py",
+      "language": "python",
+      "symbolCount": 2,
+      "lineCount": 54,
+      "complexity": "simple",
+      "pagerank": 0.052247,
+      "communityId": 0,
+      "tags": [
+        "test"
+      ],
+      "summary": "Tests for integration 2."
+    },
+    {
+      "id": "file:tests/test_integration.py",
+      "type": "file",
+      "filePath": "tests/test_integration.py",
+      "language": "python",
+      "symbolCount": 2,
+      "lineCount": 56,
+      "complexity": "simple",
+      "pagerank": 0.052247,
+      "communityId": 0,
+      "tags": [
+        "test"
+      ],
+      "summary": "Tests for integration.",
+      "primaryOwner": "Denis Butko"
+    },
+    {
+      "id": "file:tests/test_s3_adapter.py",
+      "type": "file",
+      "filePath": "tests/test_s3_adapter.py",
+      "language": "python",
+      "symbolCount": 16,
+      "lineCount": 223,
+      "complexity": "complex",
+      "pagerank": 0.052247,
+      "communityId": 0,
+      "tags": [
+        "test"
+      ],
+      "summary": "Tests for s3_adapter.",
+      "primaryOwner": "Denis Butko"
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:__init__",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "__init__",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_botocore_config",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_botocore_config",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_bounded_limit",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_bounded_limit",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_client_instance",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_client_instance",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_default_s3_client",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_default_s3_client",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_normalize_metadata",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_normalize_metadata",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_normalize_object_key",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_normalize_object_key",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_normalize_object_prefix",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_normalize_object_prefix",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_object_info_metadata",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_object_info_metadata",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_public_key",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_public_key",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_safe_details",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_safe_details",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_safe_error",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_safe_error",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_storage_key",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_storage_key",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_storage_prefix",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_storage_prefix",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:_validate_options",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "_validate_options",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:bucket_name",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "bucket_name",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:capabilities",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "capabilities",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:close",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "close",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:create",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "create",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:delete_object",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "delete_object",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:get_object",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "get_object",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:health",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "health",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:inspect",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "inspect",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:list_objects",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "list_objects",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:max_keys",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "max_keys",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:native_client",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "native_client",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:prefix",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "prefix",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    },
+    {
+      "id": "function:src/muscles_data_s3/adapter.py:put_object",
+      "type": "function",
+      "filePath": "src/muscles_data_s3/adapter.py",
+      "name": "put_object",
+      "language": "python",
+      "tags": [],
+      "summary": ""
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:examples/run_s3_object_store.py",
+      "target": "file:src/muscles_data_s3/__init__.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/__init__.py",
+      "target": "file:src/muscles_data_s3/adapter.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "class:src/muscles_data_s3/adapter.py:S3AdapterError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "class:src/muscles_data_s3/adapter.py:S3ClientMissingError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "class:src/muscles_data_s3/adapter.py:S3ConfigError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "class:src/muscles_data_s3/adapter.py:S3ConnectionError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "class:src/muscles_data_s3/adapter.py:S3ObjectStoreAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "class:src/muscles_data_s3/adapter.py:S3ObjectStoreFactory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:__init__",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_botocore_config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_bounded_limit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_client_instance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_default_s3_client",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_normalize_metadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_normalize_object_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_normalize_object_prefix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_object_info_metadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_public_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_safe_details",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_safe_error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_storage_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_storage_prefix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:_validate_options",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:bucket_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:capabilities",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:delete_object",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:get_object",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:health",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:inspect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:list_objects",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:max_keys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:native_client",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:prefix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py",
+      "target": "function:src/muscles_data_s3/adapter.py:put_object",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:__init__",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:_bounded_limit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:_client_instance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:_public_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:_safe_details",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:_safe_error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:_storage_key",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:_storage_prefix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:_validate_options",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:bucket_name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:delete_object",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:get_object",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:health",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:inspect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:list_objects",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:max_keys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:native_client",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:prefix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreAdapter",
+      "target": "function:src/muscles_data_s3/adapter.py:put_object",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreFactory",
+      "target": "function:src/muscles_data_s3/adapter.py:__init__",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreFactory",
+      "target": "function:src/muscles_data_s3/adapter.py:capabilities",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:src/muscles_data_s3/adapter.py::S3ObjectStoreFactory",
+      "target": "function:src/muscles_data_s3/adapter.py:create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_integration 2.py",
+      "target": "file:src/muscles_data_s3/__init__.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_integration.py",
+      "target": "file:src/muscles_data_s3/__init__.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_s3_adapter.py",
+      "target": "file:src/muscles_data_s3/__init__.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:application",
+      "name": "Application",
+      "description": "",
+      "nodeIds": [
+        "file:CHANGELOG.md",
+        "file:README.md",
+        "file:pyproject.toml",
+        "file:src/muscles_data_s3/__init__.py",
+        "file:src/muscles_data_s3/adapter.py"
+      ],
+      "display_order": 0,
+      "order_basis": "canonical"
+    },
+    {
+      "id": "layer:config",
+      "name": "Config",
+      "description": "",
+      "nodeIds": [
+        "file:.github/workflows/ci.yml",
+        "file:.github/workflows/release.yml"
+      ],
+      "display_order": 1,
+      "order_basis": "canonical"
+    },
+    {
+      "id": "layer:docs-tooling",
+      "name": "Docs & Tooling",
+      "description": "",
+      "nodeIds": [
+        "file:docs/release-candidate.md",
+        "file:examples/run_s3_object_store.py"
+      ],
+      "display_order": 2,
+      "order_basis": "canonical"
+    },
+    {
+      "id": "layer:test",
+      "name": "Test",
+      "description": "",
+      "nodeIds": [
+        "file:tests/test_integration 2.py",
+        "file:tests/test_integration.py",
+        "file:tests/test_s3_adapter.py"
+      ],
+      "display_order": 3,
+      "order_basis": "canonical"
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "target_path": "README.md",
+      "page_type": "repo_overview",
+      "title": "README.md",
+      "depth": 0,
+      "kind": "overview",
+      "reason": "Start here for the end-to-end picture before diving into the code.",
+      "layer_id": "layer:application"
+    },
+    {
+      "order": 2,
+      "target_path": "src/muscles_data_s3/__init__.py",
+      "page_type": "file_page",
+      "title": "__init__.py",
+      "depth": 0,
+      "kind": "code",
+      "reason": "The walk's anchor \u2014 its imports fan out the widest in a repo with no single entry point.",
+      "layer_id": "layer:application"
+    },
+    {
+      "order": 3,
+      "target_path": "src/muscles_data_s3/adapter.py",
+      "page_type": "file_page",
+      "title": "adapter.py",
+      "depth": 1,
+      "kind": "code",
+      "reason": "Directly imported by the anchor above; a core collaborator.",
+      "layer_id": "layer:application"
+    },
+    {
+      "order": 4,
+      "target_path": "tests/test_integration 2.py",
+      "page_type": "file_page",
+      "title": "test_integration 2.py",
+      "depth": 2,
+      "kind": "code",
+      "reason": "The test suite \u2014 how the system's behavior is verified.",
+      "layer_id": "layer:test"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module:application",
+      "name": "Application",
+      "path": "",
+      "layerId": "layer:application",
+      "nodeIds": [
+        "file:CHANGELOG.md",
+        "file:README.md",
+        "file:pyproject.toml",
+        "file:src/muscles_data_s3/__init__.py",
+        "file:src/muscles_data_s3/adapter.py"
+      ],
+      "wholeLayer": true,
+      "language": "markdown"
+    },
+    {
+      "id": "module:tests",
+      "name": "Test",
+      "path": "tests",
+      "layerId": "layer:test",
+      "nodeIds": [
+        "file:tests/test_integration 2.py",
+        "file:tests/test_integration.py",
+        "file:tests/test_s3_adapter.py"
+      ],
+      "wholeLayer": true,
+      "language": "python"
+    }
+  ]
+}

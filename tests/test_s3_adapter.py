@@ -4,13 +4,13 @@ from types import SimpleNamespace
 from typing import Any
 
 import pytest
-from muscles_data.catalog import DataAdapterCatalog
-from muscles_data.config import DataConfig
-from muscles_data.models import DataCapability
-from muscles_data.ports import ObjectStorePort
-from muscles_data.runtime import DataRuntime
+from muscles.data.catalog import DataAdapterCatalog
+from muscles.data.config import DataConfig
+from muscles.data.models import DataCapability
+from muscles.data.ports import ObjectStorePort
+from muscles.data.runtime import DataRuntime
 
-from muscles_data_s3 import (
+from muscles.data.s3 import (
     S3ClientMissingError,
     S3ConfigError,
     S3ConnectionError,

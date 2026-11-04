@@ -4,13 +4,13 @@ import os
 from uuid import uuid4
 
 import pytest
-from muscles_data.catalog import DataAdapterCatalog
-from muscles_data.config import DataConfig
-from muscles_data.models import DataCapability
-from muscles_data.ports import ObjectStorePort
-from muscles_data.runtime import DataRuntime
+from muscles.data.catalog import DataAdapterCatalog
+from muscles.data.config import DataConfig
+from muscles.data.models import DataCapability
+from muscles.data.ports import ObjectStorePort
+from muscles.data.runtime import DataRuntime
 
-from muscles_data_s3 import S3ObjectStoreFactory
+from muscles.data.s3 import S3ObjectStoreFactory
 
 
 pytestmark = [
@@ -48,7 +48,7 @@ def test_s3_real_object_lifecycle_against_minio():
         client = runtime.require_resource("objects.s3", DataCapability.NATIVE_CLIENT).native_client()
         client.create_bucket(Bucket=bucket)
         store = runtime.require_port("objects.s3", ObjectStorePort)
-        contracts = pytest.importorskip("muscles_data.contracts")
+        contracts = pytest.importorskip("muscles.data.contracts")
         contract = getattr(contracts, "assert_object_store_contract", None)
         if contract is not None:
             contract(lambda: store)
